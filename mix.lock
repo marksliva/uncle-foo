@@ -1,0 +1,9 @@
+%{"cors_plug": {:hex, :cors_plug, "1.1.1"},
+  "corsica": {:hex, :corsica, "0.4.1"},
+  "cowboy": {:hex, :cowboy, "1.0.4"},
+  "cowlib": {:hex, :cowlib, "1.0.2"},
+  "maru": {:hex, :maru, "0.9.5"},
+  "plug": {:hex, :plug, "1.1.2"},
+  "poison": {:hex, :poison, "2.1.0"},
+  "ranch": {:hex, :ranch, "1.2.1"},
+  "remix": {:hex, :remix, "0.0.2"}}

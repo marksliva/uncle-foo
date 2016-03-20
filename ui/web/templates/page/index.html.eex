@@ -1,0 +1,21 @@
+<div>
+  <h2>Uncle Foo'$ code sandbox</h2>
+  <div>
+    <span>Select a language </span>
+    <select id="lang" name="lang">
+      <option>elixir</option>
+      <option>c</option>
+      <option>clojure</option>
+      <option>ruby</option>
+      <option value="nodejs">javascript (nodejs)</option>
+    </select>
+  </div>
+  <div>
+    <label for="code">Enter your code </label><textarea style="vertical-align:middle; margin: 5px;" rows=20 cols=100 id="code" name="code"></textarea>
+  </div>
+  <div>
+    <button name="submit" id="submit">run your code</button>
+  </div>
+
+  <div style="margin:20px;" id="result"/>
+</div>
