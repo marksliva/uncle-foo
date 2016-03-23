@@ -28,7 +28,7 @@ mix phoenix.server
 
 #### todo:
 
-* [ ] refactor API code into the phoenix app so ui dir becomes the only app
-* [ ] should be able to stop using cors
+* [x] refactor API code into the phoenix app so ui dir becomes the only app
+* [x] stop using cors
 * [ ] make frontend code editing better - make indentation easy, allow auto run interval
 * [ ] add more languages

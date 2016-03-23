@@ -1,34 +1,29 @@
 # This file is responsible for configuring your application
 # and its dependencies with the aid of the Mix.Config module.
+#
+# This configuration file is loaded before any dependency and
+# is restricted to this project.
 use Mix.Config
 
-config :maru, Router.UncleFoo,
-  http: [port: 8880]
+# Configures the endpoint
+config :ui, Ui.Endpoint,
+  url: [host: "localhost"],
+  root: Path.dirname(__DIR__),
+  secret_key_base: "R+a1Y7jCsGFoPiHUAQSiIxt73jJmGfa2djYzrXAWYL4itoc7hv1Bwb5Vtpkg4KRo",
+  render_errors: [accepts: ~w(html json)],
+  pubsub: [name: Ui.PubSub,
+           adapter: Phoenix.PubSub.PG2]
 
-# This configuration is loaded before any dependency and is restricted
-# to this project. If another project depends on this project, this
-# file won't be loaded nor affect the parent project. For this reason,
-# if you want to provide default values for your application for
-# 3rd-party users, it should be done in your "mix.exs" file.
+# Configures Elixir's Logger
+config :logger, :console,
+  format: "$time $metadata[$level] $message\n",
+  metadata: [:request_id]
 
-# You can configure for your application as:
-#
-#     config :uncle_foo, key: :value
-#
-# And access this configuration in your application as:
-#
-#     Application.get_env(:uncle_foo, :key)
-#
-# Or configure a 3rd-party app:
-#
-     config :logger, :console,
-       level: :info
-#
+# Import environment specific config. This must remain at the bottom
+# of this file so it overrides the configuration defined above.
+import_config "#{Mix.env}.exs"
 
-# It is also possible to import configuration files, relative to this
-# directory. For example, you can emulate configuration per environment
-# by uncommenting the line below and defining dev.exs, test.exs and such.
-# Configuration from the imported file will override the ones defined
-# here (which is why it is important to import them last).
-#
-#     import_config "#{Mix.env}.exs"
+# Configure phoenix generators
+config :phoenix, :generators,
+  migration: true,
+  binary_id: false

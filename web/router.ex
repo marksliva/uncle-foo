@@ -13,6 +13,12 @@ defmodule Ui.Router do
     plug :accepts, ["json"]
   end
 
+  scope "/" do
+    pipe_through :api
+
+    post "/run", RunController, :run
+  end
+
   scope "/", Ui do
     pipe_through :browser # Use the default browser stack
 

@@ -1,5 +1,4 @@
-defmodule UncleFoo.HandleRequest do
-  require Logger
+defmodule Ui.HandleRequest do
 
   def compute(lang, code) when lang == "elixir" do
     file_path = write_code_to_temp_file(code)
@@ -26,7 +25,6 @@ defmodule UncleFoo.HandleRequest do
     bin_path = write_code_to_temp_file("", ".c")
     exec_str = "gcc -o " <> bin_path <> " " <> file_path <> ";" <>
     bin_path
-    Logger.info(exec_str)
     exec_str |> String.to_char_list |> :os.cmd
   end
 

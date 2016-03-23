@@ -1,18 +1,8 @@
-# maru api app
-
 /_build
-/cover
+/db
 /deps
-erl_crash.dump
 *.ez
-
-# phoenix app
-
-/ui/_build
-/ui/db
-/ui/deps
-/ui/*.ez
-/ui/erl_crash.dump
-/ui/node_modules
-/ui/priv/static/
-/ui/config/prod.secret.exs
+/erl_crash.dump
+/node_modules
+/priv/static/
+/config/prod.secret.exs
