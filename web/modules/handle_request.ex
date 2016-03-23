@@ -22,10 +22,25 @@ defmodule Ui.HandleRequest do
 
   def compute(lang, code) when lang == "c" do
     file_path = write_code_to_temp_file(code, ".c")
-    bin_path = write_code_to_temp_file("", ".c")
+    bin_path = write_code_to_temp_file("")
     exec_str = "gcc -o " <> bin_path <> " " <> file_path <> ";" <>
     bin_path
     exec_str |> String.to_char_list |> :os.cmd
+  end
+
+  # needs work
+  #def compute(lang, code) when lang == "rust" do
+  #  file_path = write_code_to_temp_file(code, ".rs")
+  #  bin_path = write_code_to_temp_file("")
+  #  exec_str = "rustc " <> file_path <> " -o " <> bin_path <> ";" <>
+  #  bin_path
+  #  Logger.info exec_str
+  #  exec_str |> String.to_char_list |> :os.cmd
+  #end
+
+  def compute(lang, code) when lang == "go" do
+    file_path = write_code_to_temp_file(code, ".go")
+    "go run " <> file_path |> String.to_char_list |> :os.cmd
   end
 
   def compute(lang, code) do

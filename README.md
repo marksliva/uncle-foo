@@ -30,8 +30,9 @@ mix phoenix.server
 - c
 - clojure
 - ruby
+- go
 - javascript (nodejs flavor)
-(make sure the language you select is installed on your box)
+#### make sure the language you select is installed on your box
 
 
 #### todo:

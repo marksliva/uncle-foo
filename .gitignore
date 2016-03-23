@@ -6,3 +6,4 @@
 /node_modules
 /priv/static/
 /config/prod.secret.exs
+*.swp
