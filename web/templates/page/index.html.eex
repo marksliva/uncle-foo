@@ -8,6 +8,8 @@
       <option>clojure</option>
       <option>ruby</option>
       <option>go</option>
+      <option>rust</option>
+      <option>python</option>
       <option value="nodejs">javascript (nodejs)</option>
     </select>
   </div>
