@@ -9,7 +9,9 @@
       <option>ruby</option>
       <option>go</option>
       <option>rust</option>
+      <option>racket</option>
       <option>python</option>
+      <option>perl</option>
       <option value="nodejs">javascript (nodejs)</option>
     </select>
   </div>

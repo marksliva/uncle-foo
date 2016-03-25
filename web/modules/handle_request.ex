@@ -41,6 +41,16 @@ defmodule Ui.HandleRequest do
     "python " <> file_path |> String.to_char_list |> :os.cmd
   end
 
+  def compute(lang, code) when lang == "perl" do
+    file_path = write_code_to_temp_file(code)
+    "perl " <> file_path |> String.to_char_list |> :os.cmd
+  end
+
+  def compute(lang, code) when lang == "racket" do
+    file_path = write_code_to_temp_file(code)
+    "racket -f " <> file_path |> String.to_char_list |> :os.cmd
+  end
+
   def compute(lang, code) when lang == "go" do
     file_path = write_code_to_temp_file(code, ".go")
     "go run " <> file_path |> String.to_char_list |> :os.cmd
